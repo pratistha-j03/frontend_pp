@@ -1,7 +1,7 @@
 function ServiceCard({ icon, image, title, description }) {
   return (
     <div className="flex flex-col h-full group">
-      <div className="relative w-full h-64 rounded-2xl overflow-hidden bg-gray-200 shadow-sm">
+      <div className="relative w-full h-44 sm:h-48 md:h-52 rounded-2xl overflow-hidden bg-gray-200 shadow-sm">
         <div className="absolute -top-5 left-6 w-11 h-11 z-10">
           <img
             src={icon}
