@@ -166,50 +166,23 @@ const ContactUs = () => {
     <div className="w-full bg-white mx-auto text-left">
 
       {/* Hero Section */}
-      <section className="relative min-h-[600px] overflow-hidden px-6 md:px-16 lg:px-24">
+      <section className="relative w-full min-h-120 md:min-h-130 flex items-center px-6 md:px-16 lg:px-24 py-12 overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0">
           {images.map((imgUrl, index) => (
             <div
               key={index}
-              className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
-                index === currentSlide ? "opacity-100" : "opacity-0"
-              }`}
+              className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
             >
-              <img
-                src={imgUrl}
-                alt={`Background slide ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-slate-950/40 backdrop-blur-[3px]"></div>
+              <img src={imgUrl} alt={`Background slide ${index + 1}`} className="w-full h-full object-cover" />
             </div>
           ))}
         </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto text-left pt-32 pb-20">
-          <h4 className="text-[#FFC107] font-bold text-xl mb-3">
-            Get In Touch With Us
-          </h4>
-          <h1 className="text-4xl md:text-6xl text-white font-bold leading-tight">
-            Let's Print Something
-            <br />
-            <span className="text-blue-400">Amazing Together</span>
-          </h1>
-          <p className="mt-6 text-white max-w-md text-lg">
-            We would love to hear from you. Whether you have a query or want to
-            discuss your printing needs.
-          </p>
-          <button className="mt-8 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition">
-            <a href="/contact">Contact Us →</a>
-          </button>
-        </div>
-
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
           {images.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`transition-all duration-300 h-2.5 rounded-full cursor-pointer ${
-                index === currentSlide ? "w-8 bg-[#FFC107]" : "w-2.5 bg-white/50"
+              className={`transition-all duration-300 h-2.5 rounded-full cursor-pointer ${index === currentSlide ? 'w-8 bg-[#FFC107]' : 'w-2.5 bg-white/50'
               }`}
             />
           ))}
