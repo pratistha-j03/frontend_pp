@@ -10,6 +10,7 @@ import AdminPanel from './pages/AdminPanel'
 import AdminLogin from './pages/AdminLogin'
 import ProtectedRoute from './components/ProtectedRoute'
 import FloatingActions from './components/landingpage/FloatingActions'
+import CTAButtons from './components/landingpage/CtaBtns'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/" element={
           <>
             <HeroSection />
+            <CTAButtons/>
             <ServiceSection />
             <FeaturesSection />
             <AboutSection />

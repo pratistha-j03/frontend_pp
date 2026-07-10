@@ -19,7 +19,7 @@ function FloatingActions() {
       bg: 'bg-gradient-to-r from-[#25D366] to-[#34e075]',
       glow: 'shadow-green-500/30',
       label: 'Chat on WhatsApp',
-      link: 'https://wa.me/919999999999'
+      link: 'https://wa.me/+918127918160'
     },
     {
       id: 'email',
@@ -35,7 +35,7 @@ function FloatingActions() {
       bg: 'bg-gradient-to-r from-amber-500 to-amber-400 text-slate-900',
       glow: 'shadow-amber-500/30 text-slate-900',
       label: 'Send SMS',
-      link: 'sms:+919999999999?body=Hello%20Puja%20Printers'
+      link: 'sms:+918127918160?body=Hello%20Puja%20Printers'
     },
     {
       id: 'share',
