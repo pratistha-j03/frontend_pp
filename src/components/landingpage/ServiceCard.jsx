@@ -1,20 +1,11 @@
 function ServiceCard({ icon, image, title, description }) {
   return (
-    <div className="flex flex-col h-[380px] w-full group overflow-hidden">
-      
+    <div className="flex flex-col h-95 w-full group overflow-hidden">
       <div className="relative w-full h-36 sm:h-40 md:h-44 rounded-2xl overflow-hidden bg-gray-200 shadow-sm shrink-0">
-        <div className="absolute top-3 left-3 w-10 h-10 z-10 bg-white/80 backdrop-blur-sm p-1.5 rounded-lg shadow-md flex items-center justify-center">
-          <img
-            src={icon}
-            alt={`${title} icon`}
-            className="w-full h-full object-contain"
-          />
+        <div className="absolute top-3 left-4 w-12 h-12 z-10">
+          <img src={icon} alt={`${title} icon`} className="w-full h-full object-contain drop-shadow-md"/>
         </div>
-
-        <img 
-          src={image || "/src/assets/pujaprinters.png"} 
-          alt={`${title} banner`} 
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        <img src={image || "/src/assets/pujaprinters.png"} alt={`${title} banner`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           onError={(e) => {
             e.target.src = "/src/assets/pujaprinters.png";
           }}
@@ -27,14 +18,12 @@ function ServiceCard({ icon, image, title, description }) {
         <p className="text-gray-500 text-justify tracking-tight font-semibold text-base px-2 flex-1 line-clamp-3">
           {description}
         </p>
-        
         <div className="mt-auto mb-2 pt-3">
           <a href="#" className="text-blue-600 font-semibold inline-flex items-center gap-1 hover:gap-3 transition-all duration-200">
             Learn More <span className="text-lg">➔</span>
           </a>
         </div>
       </div>
-      
     </div>
   );
 }
