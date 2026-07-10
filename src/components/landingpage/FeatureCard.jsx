@@ -1,14 +1,21 @@
+
 function FeatureCard({ icon, title }) {
   return (
-    <div className="bg-[#1C2A44] border border-slate-700/20 rounded-3xl py-7 px-3 flex flex-col items-center justify-center text-center min-h-37.5 transition-transform duration-200 hover:scale-105">
-      <div className="w-14 h-14 rounded-full bg-[#1A49C9]/20 flex items-center justify-center mb-4">
-        <img src={icon} alt={title} className="w-2xl h-2xl object-contain"/>
+    <div className="bg-[#122247]/60 border border-slate-700/30 rounded-3xl p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-[#122247]/90 hover:-translate-y-1 group">
+      
+      {/* Dynamic Blue Circle Container */}
+      <div className="w-16 h-16 rounded-full bg-[#1A49C9] flex items-center justify-center mb-5 shadow-lg shadow-blue-600/10 transition-transform duration-300 group-hover:scale-110">
+        {/* Render the Lucide icon directly inside the node */}
+        {icon}
       </div>
-      <h4 className="text-white font-medium text-sm md:text-base px-2 max-w-37.5 leading-snug">
+
+      {/* Feature Text Header */}
+      <h3 className="text-white font-bold text-base md:text-lg tracking-wide group-hover:text-blue-400 transition-colors duration-200">
         {title}
-      </h4>
+      </h3>
+
     </div>
   );
-} 
+}
 
 export default FeatureCard;

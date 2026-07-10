@@ -17,9 +17,6 @@ function AboutSection() {
           <div className="absolute bottom-0 left-0 w-1/2 aspect-2/1 rounded-3xl bg-[#1A49C9] z-20"></div>
         </div>
         <div className="flex flex-col items-start text-left">
-          <span className="text-[#1A49C9] font-bold uppercase tracking-tight text-3xl mb-2">
-            About Us
-          </span>
           <h2 className="text-[#021335] text-4xl md:text-6xl font-extrabold tracking-tight leading-tight max-w-lg mb-6">
             Your Trusted <br/>
             <span className="text-[#1A49C9]">Printing Partner</span>
@@ -38,7 +35,7 @@ function AboutSection() {
             ))}
           </ul>
           <button className="bg-[#1A49C9] text-white text-xl font-bold px-6 py-3 rounded-xl flex items-center gap-2 hover:bg-blue-900 transition-colors duration-200 shadow-md cursor-pointer mt-4">
-            <a href="/services">Learn More <span className="text-lg">➔</span></a>
+            <a href="/services">Learn More</a>
           </button>
         </div>
       </div>
