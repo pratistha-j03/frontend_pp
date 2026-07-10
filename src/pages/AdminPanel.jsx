@@ -67,7 +67,6 @@ const AdminPanel = () => {
   const [services, setServices] = useState([]);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [iconFile, setIconFile] = useState(null);
   const [imageFile, setImageFile] = useState(null);
   const [messages, setMessages] = useState([]);
   const [expandedMessageId, setExpandedMessageId] = useState(null);
@@ -148,7 +147,6 @@ const AdminPanel = () => {
     const formData = new FormData();
     formData.append('title', title);
     formData.append('description', description);
-    if (iconFile) formData.append('iconFile', iconFile);
     if (imageFile) formData.append('imageFile', imageFile);
 
     const created = await createService(formData);
@@ -156,7 +154,6 @@ const AdminPanel = () => {
       setServices([...services, created]);
       setTitle('');
       setDescription('');
-      setIconFile(null);
       setImageFile(null);
       showSuccess('Service added', `"${created.title}" has been added successfully.`);
     } else {
@@ -353,8 +350,6 @@ const AdminPanel = () => {
               <input type="text" required value={description} onChange={e => setDescription(e.target.value)} className="w-full border p-2 rounded-lg text-sm" placeholder="e.g. High quality prints..." />
             </div>
             <div>
-              <label className="block text-xs font-bold mb-1">Upload Icon</label>
-              <input type="file" accept="image/*" onChange={e => setIconFile(e.target.files[0])} className="w-full border p-1 text-xs bg-slate-50 rounded-lg mb-2" />
               <label className="block text-xs font-bold mb-1">Upload Card Display Image</label>
               <input type="file" accept="image/*" onChange={e => setImageFile(e.target.files[0])} className="w-full border p-1 text-xs bg-slate-50 rounded-lg" />
             </div>
@@ -372,7 +367,6 @@ const AdminPanel = () => {
             {services.map((s) => (
               <div key={s._id} className="flex justify-between items-center bg-white p-4 rounded-xl border">
                 <div className="flex items-center gap-3">
-                  {s.icon && <img src={s.icon} alt="" className="w-8 h-8 object-contain" />}
                   <div>
                     <h4 className="font-bold text-[#021335]">{s.title}</h4>
                     <p className="text-xs text-gray-500">{s.description}</p>
