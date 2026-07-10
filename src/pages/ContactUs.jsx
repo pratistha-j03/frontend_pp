@@ -321,7 +321,7 @@ const ContactUs = () => {
 
               {/* Message */}
               <div>
-                <label className="block mb-1 text-sm font-medium flex justify-between">
+                <label className="mb-1 text-sm font-medium flex justify-between">
                   <span>Message <span className="text-red-500">*</span></span>
                   <span className={`text-xs font-normal ml-auto ${formData.message.length > 950 ? "text-red-500" : "text-gray-400"}`}>
                     {formData.message.length}/1000
