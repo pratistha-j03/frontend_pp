@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaFacebookF, FaWhatsapp } from 'react-icons/fa';
-import { Mail, MessageSquare, Share2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Mail, MessageSquare, ChevronLeft, ChevronRight } from 'lucide-react';
 
 function FloatingActions() {
   const [isOpen, setIsOpen] = useState(true);
@@ -11,7 +11,7 @@ function FloatingActions() {
       bg: 'bg-gradient-to-r from-[#3B5998] to-[#4c70ba]',
       glow: 'shadow-blue-600/30',
       label: 'Facebook Page',
-      link: 'https://facebook.com/yourpage'
+      link: 'https://www.facebook.com/sharer.php?t=Pujaprinters&u=https%3A%2F%2Fpujaprinters.com%2F'
     },
     {
       id: 'whatsapp',
@@ -19,7 +19,7 @@ function FloatingActions() {
       bg: 'bg-gradient-to-r from-[#25D366] to-[#34e075]',
       glow: 'shadow-green-500/30',
       label: 'Chat on WhatsApp',
-      link: 'https://wa.me/+918127918160'
+      link: 'https://web.whatsapp.com/send?text=https%3A%2F%2Fpujaprinters.com%2F'
     },
     {
       id: 'email',
@@ -27,7 +27,7 @@ function FloatingActions() {
       bg: 'bg-gradient-to-r from-slate-600 to-slate-500',
       glow: 'shadow-slate-500/30',
       label: 'Send Email',
-      link: 'mailto:pujaprinters@gmail.com'
+      link: 'mailto:Pujaprinters75@gmail.com'
     },
     {
       id: 'sms',
@@ -36,14 +36,6 @@ function FloatingActions() {
       glow: 'shadow-amber-500/30 text-slate-900',
       label: 'Send SMS',
       link: 'sms:+918127918160?body=Hello%20Puja%20Printers'
-    },
-    {
-      id: 'share',
-      icon: <Share2 className="w-5 h-5" />,
-      bg: 'bg-gradient-to-r from-emerald-500 to-emerald-400',
-      glow: 'shadow-emerald-500/30',
-      label: 'Share Website',
-      link: '#'
     }
   ];
   return (
