@@ -166,14 +166,14 @@ const ContactUs = () => {
     <div className="w-full bg-white mx-auto text-left">
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-120 md:min-h-130 flex items-center px-6 md:px-16 lg:px-24 py-12 overflow-hidden">
+      <section className="relative w-full h-[250px] sm:h-[320px] md:h-[500px] overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0">
           {images.map((imgUrl, index) => (
             <div
               key={index}
               className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
             >
-              <img src={imgUrl} alt={`Background slide ${index + 1}`} className="w-full h-full object-cover" />
+              <img src={imgUrl} alt={`Background slide ${index + 1}`} className="w-full h-full object-center md:object-cover bg-white" />
                <div className="absolute inset-0 bg-slate-950/40"></div>
             </div>
           ))}

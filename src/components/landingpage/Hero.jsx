@@ -25,7 +25,7 @@ function Hero() {
 
   return (
     <div className="w-full flex flex-col m-0 p-0 overflow-x-hidden">
-      <section className="relative w-full min-h-120 md:min-h-130 flex items-center px-6 md:px-16 lg:px-24 py-12 overflow-hidden">
+      <section className="relative w-full h-[250px] sm:h-[320px] md:h-[500px] overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0">
           {images.map((imgUrl, index) => (
             <div
