@@ -14,7 +14,7 @@ function Services() {
   }, []);
 
   return (
-    <section className="w-full bg-white py-10 px-3 sm:px-6 md:px-12 lg:px-16">
+    <section className="w-full bg-white py-10 px-4 md:px-8 lg:px-10">
       
       <div className="text-center mb-12">
         <h4 className="text-[#1A49C9] font-semibold uppercase text-3xl">

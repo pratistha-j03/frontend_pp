@@ -1,7 +1,6 @@
 function ServiceCard({ image, title, description }) {
   return (
     <div className="flex flex-col w-full h-full rounded-2xl overflow-hidden group bg-white shadow-[0_8px_25px_rgba(0,0,0,0.18)] hover:shadow-[0_12px_35px_rgba(0,0,0,0.25)] transition-all duration-300">
-      
       <div className="relative w-full h-40 sm:h-40 md:h-44 overflow-hidden bg-gray-200 shrink-0">
         <img
           src={image || "/src/assets/pujaprinters.png"}
@@ -24,7 +23,7 @@ function ServiceCard({ image, title, description }) {
 
         <div className="text-center w-full mt-3 mb-4">
           <a
-            href="/contact"
+            href={`/contact?source=${encodeURIComponent(title)}`}
             className="text-blue-600 font-semibold inline-flex items-center gap-1 hover:gap-3 transition-all duration-200"
           >
             Send Enquiry
