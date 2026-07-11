@@ -51,7 +51,7 @@ function AboutSection() {
           {/* Button */}
           <div className="w-full flex justify-center lg:justify-start">
             <a
-              href="/contact"
+              href="/services"
               className="inline-flex items-center justify-center bg-[#1A49C9] text-white text-lg md:text-xl font-bold px-6 py-3 rounded-xl hover:bg-blue-900 transition-colors duration-200 shadow-md"
             >
               Learn More
