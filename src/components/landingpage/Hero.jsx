@@ -32,8 +32,7 @@ function Hero() {
               key={index}
               className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
             >
-              <img src={imgUrl} alt={`Background slide ${index + 1}`} className="w-full h-full object-center md:object-cover bg-white" />
-              <div className="absolute inset-0 bg-slate-950/40"></div>
+              <img src={imgUrl} alt={`Background slide ${index + 1}`} className="w-full h-full object-cover" />
             </div>
           ))}
         </div>
